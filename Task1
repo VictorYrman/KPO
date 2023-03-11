@@ -13,6 +13,7 @@ namespace kpotask
             int a = int.Parse(Console.ReadLine());
             int b = int.Parse(Console.ReadLine());
             int c = int.Parse(Console.ReadLine());
+            Console.WriteLine("Hello");
  
             int d1 = a + b + c;
             int d2 = a + b * c;
