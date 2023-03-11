@@ -1,3 +1,2 @@
 # KPO
-Laboratory works
 blabla
