@@ -33,7 +33,7 @@ namespace kpotask
                 }
             }
             Console.WriteLine(max);
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
