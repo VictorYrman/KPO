@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace kpotask
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+ 
+            int d1 = a + b + c;
+            int d2 = a + b * c;
+            int d3 = (a + b) * c;
+            int d4 = a * (b + c);
+            int d5 = a * b * c;
+            int d6 = a * b + c;
+ 
+            int[] array = { d1, d2, d3, d4, d5, d6 };
+ 
+            int max = array[0];
+ 
+            for(int i = 0; i<array.Length; i++)
+            {
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
+            }
+            Console.WriteLine(max);
+            Console.ReadLine();
+        }
+    }
+}
