@@ -1,0 +1,71 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using kpotask4;
+
+namespace kpotask4Tests
+{
+    [TestClass]
+    public class kpotask4Test
+    {
+        [TestMethod]
+        public void NumbersLessM_11and1_1and10returned()
+        {
+            int n = 11;
+            int m = 1;
+
+            string expected = "1 10 ";
+
+            string actual = Program.NumbersLessM(n, m);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void NumbersLessM_15and25_5and14returned()
+        {
+            int n = 15;
+            int m = 25;
+
+            string expected = "5 14 ";
+
+            string actual = Program.NumbersLessM(n, m);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void NumbersLessM_30and36_6and15and24returned()
+        {
+            int n = 30;
+            int m = 36;
+
+            string expected = "6 15 24 ";
+
+            string actual = Program.NumbersLessM(n, m);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void NumbersLessM_0and1_1returned()
+        {
+            int n = 0;
+            int m = 1;
+
+            string expected = "0";
+
+            string actual = Program.NumbersLessM(n, m);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void NumbersLessM_5and4_2returned()
+        {
+            int n = 5;
+            int m = 4;
+
+            string expected = "2 ";
+
+            string actual = Program.NumbersLessM(n, m);
+
+            Assert.AreEqual(expected, actual);
+        }
+    }
+}

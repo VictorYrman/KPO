@@ -1,0 +1,58 @@
+using System;
+
+namespace kpotask4
+{
+    public class Program
+    {
+        static public string NumbersLessM(int n, int m)
+        {
+            int sum = 0;
+            string result = null; 
+
+            if (n == 0)
+            {
+                result = "0";
+                return result;
+            }
+
+            for (int i = 1; i < n; i++)
+            {
+                int num = i;
+                while (num > 0)
+                {
+                    if (num < 10)
+                    {
+                        sum += num;
+
+                        num /= 10;
+
+                        break;
+                    }
+
+                    sum += (num % 10);
+
+                    num /= 10;
+                }
+
+                if (sum * sum == m)
+                {
+                    result += $"{i}" + " ";
+                }
+
+                sum = 0;
+            }
+            return result;
+        }
+        static void Main()
+        {
+            int n = int.Parse(Console.ReadLine());
+            int m = int.Parse(Console.ReadLine());
+
+            NumbersLessM(n, m);
+
+            Console.WriteLine(NumbersLessM(n, m));
+
+            Console.ReadKey();
+        }
+    }
+}

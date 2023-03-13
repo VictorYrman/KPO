@@ -1,0 +1,61 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using kpotask3;
+
+namespace kpotask3Tests
+{
+    [TestClass]
+    public class kpotask3Test
+    {
+        [TestMethod]
+        public void Fibonachi_7_13returned()
+        {
+            int n = 7;
+            int expected = 13;
+
+            int actual = Fib.Fibonachi(n);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Fibonachi_6_8returned()
+        {
+            int n = 6;
+            int expected = 8;
+
+            int actual = Fib.Fibonachi(n);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Fibonachi_8_21returned()
+        {
+            int n = 8;
+            int expected = 21;
+
+            int actual = Fib.Fibonachi(n);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Fibonachi_5_5returned()
+        {
+            int n = 5;
+            int expected = 5;
+
+            int actual = Fib.Fibonachi(n);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Fibonachi_4_3returned()
+        {
+            int n = 4;
+            int expected = 3;
+
+            int actual = Fib.Fibonachi(n);
+
+            Assert.AreEqual(expected, actual);
+        }
+    }
+}

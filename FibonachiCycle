@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+
+namespace kpotask2
+{
+    public class Fib
+    {
+        static public int Fibonachi(int n)
+        {
+            int a = 1, b = 1, c;
+
+            if (n <= 2)
+            {
+                return 1;
+            }
+            else
+            {
+                for (int i = 3; i <= n; i++)
+                {
+                    c = a + b;
+
+                    a = b;
+                    b = c;
+                }
+                return b;
+            }
+        }
+        static void Main()
+        {
+            Stopwatch timer = new Stopwatch();
+
+            int n = int.Parse(Console.ReadLine());
+            timer.Start();
+            Console.WriteLine(Fibonachi(n));
+            timer.Stop();
+            Console.WriteLine("Время выполнения: "+ timer.Elapsed);
+
+            Console.ReadKey();
+        }
+    }
+}

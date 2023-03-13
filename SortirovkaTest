@@ -1,0 +1,66 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using kpotask;
+
+namespace kpotaskTests
+{
+    [TestClass]
+    public class kpotaskTest
+    {
+        [TestMethod]
+        public void Sort_array_1and11and111returned()
+        {
+            string[] array = { "111", "11", "1" };
+
+            string expected = "1 11 111 ";
+
+            string actual = Sortirovka.Sort(array);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Sort_array_10and1111returned()
+        {
+            string[] array = { "1111", "10"};
+
+            string expected = "10 1111 ";
+
+            string actual = Sortirovka.Sort(array);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Sort_array_11and1011and10and1returned()
+        {
+            string[] array = { "11", "1011", "10", "1" };
+
+            string expected = "1 10 11 1011 ";
+
+            string actual = Sortirovka.Sort(array);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Sort_array_1and111and10returned()
+        {
+            string[] array = { "1", "111", "10" };
+
+            string expected = "1 10 111 ";
+
+            string actual = Sortirovka.Sort(array);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Sort_array_1and10and0returned()
+        {
+            string[] array = { "1", "10", "0" };
+
+            string expected = "0 1 10 ";
+
+            string actual = Sortirovka.Sort(array);
+
+            Assert.AreEqual(expected, actual);
+        }
+    }
+}

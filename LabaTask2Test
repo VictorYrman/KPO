@@ -1,0 +1,106 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using kpotask5;
+
+namespace kpotask5Tests
+{
+    [TestClass]
+    public class kpotask5Test
+    {
+        [TestMethod]
+        public void WeatherMarch_array1_TEXTreturned()
+        {
+            int[] osadki = {0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1};
+            int counter = 0;
+            for(int i = 0; i<osadki.Length; i++)
+            {
+                if (osadki[i] == 0)
+                {
+                    counter++;
+                }
+            }
+
+            string expected = $"Неверно, осадков не было {counter} дней";
+
+            string actual = Weather.WeatherMarch(osadki);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void WeatherMarch_array2_TEXTreturned()
+        {
+            int[] osadki = { 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1 };
+            int counter = 0;
+            for (int i = 0; i < osadki.Length; i++)
+            {
+                if (osadki[i] == 0)
+                {
+                    counter++;
+                }
+            }
+
+            string expected = $"Неверно, осадков не было {counter} дней";
+
+            string actual = Weather.WeatherMarch(osadki);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void WeatherMarch_array3_TEXTreturned()
+        {
+            int[] osadki = { 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1 };
+            int counter = 0;
+            for (int i = 0; i < osadki.Length; i++)
+            {
+                if (osadki[i] == 0)
+                {
+                    counter++;
+                }
+            }
+
+            string expected = $"Верно, осадков не было {counter} дней";
+
+            string actual = Weather.WeatherMarch(osadki);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void WeatherMarch_array4_TEXTreturned()
+        {
+            int[] osadki = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+            int counter = 0;
+            for (int i = 0; i < osadki.Length; i++)
+            {
+                if (osadki[i] == 0)
+                {
+                    counter++;
+                }
+            }
+
+            string expected = $"Неверно, осадков не было {counter} дней";
+
+            string actual = Weather.WeatherMarch(osadki);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void WeatherMarch_array5_TEXTreturned()
+        {
+            int[] osadki = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+            int counter = 0;
+            for (int i = 0; i < osadki.Length; i++)
+            {
+                if (osadki[i] == 0)
+                {
+                    counter++;
+                }
+            }
+
+            string expected = $"Неверно, осадков не было {counter} дней";
+
+            string actual = Weather.WeatherMarch(osadki);
+
+            Assert.AreEqual(expected, actual);
+        }
+    }
+}
